@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="TimeWaste">
+<head>
+	<meta charset="UTF-8">
+	<title>Social Media</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+<body>
+	<header>
+		<div class="container">
+			<nav class="navbar navbar-default navbar-fixed-top" ng-controller="NavigationController">
+			  <div class="col-md-6">
+			  	Social Media
+			  </div>
+			  <div class="col-md-4 col-md-offset-2">
+			  	  <form>
+			  	  	<div class="col-md-5">
+			  	  		<div class="form-group">
+			  	  			<input type="text" ng-model="login.email" class="form-control" placeholder="email">
+			  	  		</div>
+			  	  	</div>
+			  	  	<div class="col-md-5">
+			  	  		<div class="form">
+			  	  			<input type="password" ng-model="login.password" class="form-control" placeholder="Password">
+			  	  		</div>
+			  	  	</div>
+			  	  	<div class="col-md-2">
+			  	  		<button class="btn btn-primary" ng-click="logUserIn()">Login</button>
+			  	  	</div>
+			  	  	<div class="col-md-12">
+			  	  		<a ui-sref="signUp">Create and Account</a>
+			  	  	</div>
+			  		
+			  	  </form>
+			  </div>
+			</nav>
+			<section>
+				<div ui-view></div>
+			</section>
+		</div>
+	</header>
+	<script src="node_modules/angular/angular.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
+	<script src="app/app.js"></script>
+	<script src="app/signup/signup-controller.js"></script>
+	<script src="app/navigation/navigation-controller.js"></script>
+</body>
+</html>
